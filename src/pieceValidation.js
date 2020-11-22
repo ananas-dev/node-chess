@@ -31,20 +31,20 @@ export class PieceValidation {
 
   static create (piece, board) {
     switch (piece) {
-    case PieceType.Bishop:
-      return new BishopValidation(board);
-    case PieceType.King:
-      return new KingValidation(board);
-    case PieceType.Knight:
-      return new KnightValidation(board);
-    case PieceType.Pawn:
-      return new PawnValidation(board);
-    case PieceType.Queen:
-      return new QueenValidation(board);
-    case PieceType.Rook:
-      return new RookValidation(board);
-    default:
-      return null;
+      case PieceType.Bishop:
+        return new BishopValidation(board);
+      case PieceType.King:
+        return new KingValidation(board);
+      case PieceType.Knight:
+        return new KnightValidation(board);
+      case PieceType.Pawn:
+        return new PawnValidation(board);
+      case PieceType.Queen:
+        return new QueenValidation(board);
+      case PieceType.Rook:
+        return new RookValidation(board);
+      default:
+        return null;
     }
   }
 

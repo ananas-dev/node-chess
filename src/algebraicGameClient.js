@@ -280,20 +280,20 @@ export class AlgebraicGameClient extends EventEmitter {
         // apply pawn promotion
         if (promo) {
           switch (promo) {
-          case 'B':
-            p = Piece.createBishop(side);
-            break;
-          case 'N':
-            p = Piece.createKnight(side);
-            break;
-          case 'Q':
-            p = Piece.createQueen(side);
-            break;
-          case 'R':
-            p = Piece.createRook(side);
-            break;
-          default:
-            p = Piece.createPawn(side);
+            case 'B':
+              p = Piece.createBishop(side);
+              break;
+            case 'N':
+              p = Piece.createKnight(side);
+              break;
+            case 'Q':
+              p = Piece.createQueen(side);
+              break;
+            case 'R':
+              p = Piece.createRook(side);
+              break;
+            default:
+              p = Piece.createPawn(side);
           }
 
           if (p) {

@@ -101,21 +101,21 @@ export class SimpleGameClient extends EventEmitter {
           let piece;
 
           switch (promo) {
-          case 'B':
-            piece = Piece.createBishop(side);
-            break;
-          case 'N':
-            piece = Piece.createKnight(side);
-            break;
-          case 'Q':
-            piece = Piece.createQueen(side);
-            break;
-          case 'R':
-            piece = Piece.createRook(side);
-            break;
-          default:
-            piece = null;
-            break;
+            case 'B':
+              piece = Piece.createBishop(side);
+              break;
+            case 'N':
+              piece = Piece.createKnight(side);
+              break;
+            case 'Q':
+              piece = Piece.createQueen(side);
+              break;
+            case 'R':
+              piece = Piece.createRook(side);
+              break;
+            default:
+              piece = null;
+              break;
           }
 
           if (piece) {
