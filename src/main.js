@@ -3,6 +3,6 @@ import { SimpleGameClient } from './simpleGameClient';
 
 // exports
 module.exports = {
-	create : (opts) => AlgebraicGameClient.create(opts),
-	createSimple : () => SimpleGameClient.create()
+  create: (opts) => AlgebraicGameClient.create(opts),
+  createSimple: () => SimpleGameClient.create(),
 };

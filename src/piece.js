@@ -13,102 +13,102 @@
 
 // types
 export var PieceType = {
-	Bishop : 'bishop',
-	King : 'king',
-	Knight : 'knight',
-	Pawn : 'pawn',
-	Queen : 'queen',
-	Rook : 'rook'
+  Bishop: 'bishop',
+  King: 'king',
+  Knight: 'knight',
+  Pawn: 'pawn',
+  Queen: 'queen',
+  Rook: 'rook',
 };
 
 export var SideType = {
-	Black : { name : 'black' },
-	White : { name : 'white' }
+  Black: { name: 'black' },
+  White: { name: 'white' },
 };
 
 export class Piece {
-	constructor (side, notation) {
-		this.moveCount = 0;
-		this.notation = notation;
-		this.side = side;
-		this.type = null;
-	}
+  constructor (side, notation) {
+    this.moveCount = 0;
+    this.notation = notation;
+    this.side = side;
+    this.type = null;
+  }
 
-	static createBishop (side) {
-		return new Bishop(side);
-	}
+  static createBishop (side) {
+    return new Bishop(side);
+  }
 
-	static createKing (side) {
-		return new King(side);
-	}
+  static createKing (side) {
+    return new King(side);
+  }
 
-	static createKnight (side) {
-		return new Knight(side);
-	}
+  static createKnight (side) {
+    return new Knight(side);
+  }
 
-	static createPawn (side) {
-		return new Pawn(side);
-	}
+  static createPawn (side) {
+    return new Pawn(side);
+  }
 
-	static createQueen (side) {
-		return new Queen(side);
-	}
+  static createQueen (side) {
+    return new Queen(side);
+  }
 
-	static createRook (side) {
-		return new Rook(side);
-	}
+  static createRook (side) {
+    return new Rook(side);
+  }
 }
 
 export class Bishop extends Piece {
-	constructor (side) {
-		super(side, 'B');
+  constructor (side) {
+    super(side, 'B');
 
-		this.type = PieceType.Bishop;
-	}
+    this.type = PieceType.Bishop;
+  }
 }
 
 export class King extends Piece {
-	constructor (side) {
-		super(side, 'K');
+  constructor (side) {
+    super(side, 'K');
 
-		this.type = PieceType.King;
-	}
+    this.type = PieceType.King;
+  }
 }
 
 export class Knight extends Piece {
-	constructor (side) {
-		super(side, 'N');
+  constructor (side) {
+    super(side, 'N');
 
-		this.type = PieceType.Knight;
-	}
+    this.type = PieceType.Knight;
+  }
 }
 
 export class Pawn extends Piece {
-	constructor (side) {
-		super(side, '');
+  constructor (side) {
+    super(side, '');
 
-		this.type = PieceType.Pawn;
-	}
+    this.type = PieceType.Pawn;
+  }
 }
 
 export class Queen extends Piece {
-	constructor (side) {
-		super(side, 'Q');
+  constructor (side) {
+    super(side, 'Q');
 
-		this.type = PieceType.Queen;
-	}
+    this.type = PieceType.Queen;
+  }
 }
 
 export class Rook extends Piece {
-	constructor (side) {
-		super(side, 'R');
+  constructor (side) {
+    super(side, 'R');
 
-		this.type = PieceType.Rook;
-	}
+    this.type = PieceType.Rook;
+  }
 }
 
 export default {
-	Piece,
-	PieceType,
-	SideType
+  Piece,
+  PieceType,
+  SideType,
 };

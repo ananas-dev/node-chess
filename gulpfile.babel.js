@@ -5,23 +5,23 @@ import eslint from 'gulp-eslint';
 import sourcemaps from 'gulp-sourcemaps';
 
 function build () {
-	return src('src/**/*.js')
-		.pipe(sourcemaps.init())
-		.pipe(babel())
-		.pipe(sourcemaps.write('.'))
-		.pipe(dest('dist'));
+  return src('src/**/*.js')
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('dist'));
 }
 
 function clean () {
-	return src(['dist', 'reports'], { allowEmpty : true, read : false })
-		.pipe(del());
+  return src(['dist', 'reports'], { allowEmpty: true, read: false })
+    .pipe(del());
 }
 
 function lint () {
-	return src(['gulpfile.babel.js', 'src/**/*.js', 'test/**/*.js'])
-		.pipe(eslint())
-		.pipe(eslint.format())
-		.pipe(eslint.failAfterError());
+  return src(['gulpfile.babel.js', 'src/**/*.js', 'test/**/*.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 }
 
 exports.build = build;

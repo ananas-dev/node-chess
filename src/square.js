@@ -6,15 +6,15 @@
 */
 
 export class Square {
-	constructor (file, rank) {
-		this.file = file;
-		this.piece = null;
-		this.rank = rank;
-	}
+  constructor (file, rank) {
+    this.file = file;
+    this.piece = null;
+    this.rank = rank;
+  }
 
-	static create (file, rank) {
-		return new Square(file, rank);
-	}
+  static create (file, rank) {
+    return new Square(file, rank);
+  }
 }
 
 export default { Square };
